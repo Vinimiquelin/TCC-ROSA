@@ -3,7 +3,7 @@ import face_module
 
 def main():
     first_run = True
-    text = "Olá, meu nome é ROSA, como posso ajudá-lo?"
+    text = "olaoo Olá, meu nome é ROSA, como posso ajudá-lo?"
 
     while(True): 
         if (text != ""):

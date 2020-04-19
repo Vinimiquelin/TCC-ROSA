@@ -12,7 +12,8 @@ def speak(text):
 
 def get_audio():
     r = sr.Recognizer()
-    with sr.Microphone() as source:
+    mic = sr.Microphone()
+    with mic as source:
         audio = r.listen(source)
         said = ""
         try:
