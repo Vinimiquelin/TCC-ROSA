@@ -12,6 +12,50 @@ def flatoval(turtle, r):               # Horizontal Oval
         turtle.circle(r,90)
         turtle.circle(r/2,90)
 
+def face_draw(face, face_color, face_shape, face_fill):
+    # Define the face color
+    face.color(face_color)
+
+    if (face_shape == "circle"):
+        # Circle face
+        face.begin_fill()
+        face.circle(200)
+
+        if (face_fill == True):
+            face.end_fill()
+
+    else:
+        raise Exception("Não existe o formato "+face_shape+" para a face!")
+
+def speak_feedback(feedback_color, pen_color, feedback_shape):
+    # Creating feedback turtle
+    feedback = turtle.Turtle()
+
+    # Setting the width of the pen
+    feedback.width(20)
+
+    # Define the feedback color
+    feedback.color(feedback_color)
+
+    if (feedback_shape == "circle"):
+        # Circle feedback
+        pen_move(feedback, -20, -150, 0, 0)
+        feedback.begin_fill()
+        feedback.circle(200)
+        feedback.clear()
+        feedback.color(pen_color)
+
+
+    elif (feedback_shape == "ellipse"):
+        #Ellipse feedback
+        pen_move(mouth, -40, -80, 0, 90)
+        feedback.begin_fill()
+        talloval(feedback, 30)
+        feedback.clear()
+
+    else:
+        raise Exception("Não existe o formato "+feedback_shape+" para o feedback de fala!")
+
 
 def eye_draw(eye, eye_color, eye_shape, eye_fill):
     # Define the eye color
@@ -73,7 +117,7 @@ def mouth_draw(mouth, mouth_color, mouth_shape, mouth_fill):
             mouth.end_fill()
 
     elif (mouth_shape == "ellipse"):
-        #Ellipse eye
+        #Ellipse mouth
         mouth.begin_fill()
         talloval(mouth, 30)
 
@@ -96,25 +140,30 @@ def pen_move(face_element, x, y, left, right):
     face_element.right(right)   
     face_element.pendown()
 
-def face_draw(first_run, is_speaking, face_color, bg_color, face_shape, is_filled):
+def full_face_draw(face_color, eyes_color, mouth_color, bg_color, face_shape, eyes_shape, mouth_shape, face_is_filled, eyes_is_filled, mouth_is_filled):
+    # Creating the turtles
+    face = turtle.Turtle()
     right_eye = turtle.Turtle()
     left_eye = turtle.Turtle()
     mouth = turtle.Turtle()
     turtle.bgcolor(bg_color)
 
-    if (first_run == True):
-        pen_move(right_eye, 100, 0, 0, 0)
-        eye_draw(right_eye, face_color, face_shape, is_filled)
-        pen_move(left_eye, -80, 0, 0, 0)
-        eye_draw(left_eye, face_color, face_shape, is_filled)
+    # Setting the width of the pen
+    face.width(10)
+    right_eye.width(10)
+    left_eye.width(10)
+    mouth.width(10)
 
-    if (is_speaking == True):
-        pen_move(mouth, -40, -80, 0, 90)
-        mouth_draw(mouth, face_color, face_shape, is_filled)
+    pen_move(face, -20, -150, 0, 0)
+    face_draw(face, face_color, face_shape, face_is_filled)
+    pen_move(right_eye, 100, 0, 0, 0)
+    eye_draw(right_eye, eyes_color, eyes_shape, eyes_is_filled)
+    pen_move(left_eye, -80, 0, 0, 0)
+    eye_draw(left_eye, eyes_color, eyes_shape, eyes_is_filled)
+    pen_move(mouth, -40, -80, 0, 90)
+    mouth_draw(mouth, mouth_color, mouth_shape, mouth_is_filled)
+
         
-    else:
-        pen_move(mouth, -40, -80, 0, 90)
-        mouth_draw(mouth, bg_color, face_shape, is_filled)
         
 
 
