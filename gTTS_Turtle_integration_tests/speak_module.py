@@ -17,3 +17,21 @@ def conversation(text, text_part, answer):
     if text_part in text:
         speak(answer)
 
+def trigger_words_function():
+    trigger_words = [
+        "como vai você", 
+        "Por que seu nome é Rosa", 
+        "Como eu chego na sala a três",
+        "sim"]
+
+    return trigger_words
+
+def answers_function():
+    answers = [
+        "Vou bem, melhor agora que você chegou!", 
+        "O nome ROSA significa robô sociável assistivo de apoio. Estou aqui para te ajudar no que você precisar", 
+        "Você vai precisar virar a esquerda e depois à direita. Quer que eu te acompanhe?",
+        "Então vamos lá!"]
+
+    return answers
+

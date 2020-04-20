@@ -96,25 +96,25 @@ def pen_move(face_element, x, y, left, right):
     face_element.right(right)   
     face_element.pendown()
 
-def face_draw(first_run, is_speaking):
+def face_draw(first_run, is_speaking, face_color, bg_color, face_shape, is_filled):
     right_eye = turtle.Turtle()
     left_eye = turtle.Turtle()
     mouth = turtle.Turtle()
-    turtle.bgcolor("black")
+    turtle.bgcolor(bg_color)
 
     if (first_run == True):
         pen_move(right_eye, 100, 0, 0, 0)
-        eye_draw(right_eye, "cyan", "ellipse", True)
+        eye_draw(right_eye, face_color, face_shape, is_filled)
         pen_move(left_eye, -80, 0, 0, 0)
-        eye_draw(left_eye, "cyan", "ellipse", True)
+        eye_draw(left_eye, face_color, face_shape, is_filled)
 
     if (is_speaking == True):
         pen_move(mouth, -40, -80, 0, 90)
-        mouth_draw(mouth, "cyan", "ellipse", True)
+        mouth_draw(mouth, face_color, face_shape, is_filled)
         
     else:
         pen_move(mouth, -40, -80, 0, 90)
-        mouth_draw(mouth, "black", "ellipse", True)
+        mouth_draw(mouth, bg_color, face_shape, is_filled)
         
 
 
