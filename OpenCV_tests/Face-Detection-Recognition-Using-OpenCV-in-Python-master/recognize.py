@@ -19,6 +19,8 @@ def draw_boundary(img, classifier, scaleFactor, minNeighbors, color, text, clf):
             cv2.putText(img, "Natty", (x, y-4), cv2.FONT_HERSHEY_SIMPLEX, 0.8, color, 1, cv2.LINE_AA)
         if id==3:
             cv2.putText(img, "Bru", (x, y-4), cv2.FONT_HERSHEY_SIMPLEX, 0.8, color, 1, cv2.LINE_AA)
+        if id==4:
+            cv2.putText(img, "Fabio", (x, y-4), cv2.FONT_HERSHEY_SIMPLEX, 0.8, color, 1, cv2.LINE_AA)
         
         coords = [x, y, w, h]
 
