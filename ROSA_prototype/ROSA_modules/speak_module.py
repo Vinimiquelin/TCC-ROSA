@@ -13,13 +13,16 @@ def speak(text):
         ps.playsound(filename)
         os.remove("voice.mp3")
 
+'''
 def conversation(text, trigger_word, answer):
     understood = False
     if trigger_word in text:
         speak(answer)
         understood = True
 
+
     return understood
+'''
 
 def trigger_words_function():
     trigger_words = [
