@@ -1,42 +1,42 @@
 {"intents": [
-    {"tag": "greeting",
-     "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
-     "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
-     "context": [""]
-    },
     {"tag": "saudacoes",
-        "patterns": ["Olá Rosa", "Bom dia Rosa", "Boa tarde Rosa","Oi","Tudo bem?", "Eaí", "Oi Rosa"],
-        "responses": ["Olá! Rosa ao seu dispor", "Olá! Como posso te ajudar?", "Oi! Posso te ajudar com alguma informação?"],
+        "patterns": ["Ola Rosa", "Bom dia Rosa", "Boa tarde Rosa","Oi","Tudo bem?", "Eai", "Oi Rosa"],
+        "responses": ["Ola! Rosa ao seu dispor", "Ola! Como posso te ajudar?", "Oi! Posso te ajudar com alguma informacao?"],
         "context": [""]
        },
     {"tag": "apresentacao",
-        "patterns": ["Qual o seu nome?", "Quem é você?", "Você é um robô?","Como você pode me ajudar?"],
-        "responses": ["Meu nome é ROSA, significa robô sociável assistivo de apoio. Estou aqui para te ajudar no que você precisar"],
+        "patterns": ["Qual o seu nome?", "Quem e voce?", "Voce e um robo?","Como voce pode me ajudar?"],
+        "responses": ["Meu nome e ROSA, significa robo sociavel assistivo de apoio. Estou aqui para te ajudar no que voce precisar"],
         "context": [""]
        },
     {"tag": "despedida",
-        "patterns": ["Tchau Rosa", "Até mais tarde", "Até a próxima"],
-        "responses": ["Até mais!", "Tenha um bom dia!", "Tchau tchau, se precisar de alguma coisa estarei por aqui"],
+        "patterns": ["Tchau Rosa", "Ate mais tarde", "Ate a proxima"],
+        "responses": ["Ate mais!", "Tenha um bom dia!", "Tchau tchau, se precisar de alguma coisa estarei por aqui"],
         "context": [""]
        },
     {"tag": "agradecimento",
         "patterns": ["Obrigado", "Obrigada Rosa", "Valeu Rosa", "Me ajudou muito", "Obrigado por ajudar","Valeu"],
-        "responses": ["Não há de que!", "De nada", "Sempre um prazer"],
+        "responses": ["Nao ha de que!", "De nada", "Sempre um prazer"],
         "context": [""]
        },
     {"tag": "semresposta",
         "patterns": [],
-        "responses": ["Me desculpe, não consegui te entender", "Acho que não compreendi o que você disse", "Acho que não tenho resposta para o que você disse, me desculpe"],
+        "responses": ["Me desculpe, nao consegui te entender", "Acho que não compreendi o que voce disse", "Acho que nao tenho resposta para o que voce disse, me desculpe"],
         "context": [""]
        },
     {"tag": "saladeaula",
-        "patterns": ["Gostaria de ir até a sala de aula", "Não conheço o prédio", "Estou procurando uma sala", "Estou perdido", "Estou procurando o auditório" ],
+        "patterns": ["Gostaria de ir ate a sala de aula", "Nao conheço o predio", "Estou procurando uma sala", "Estou perdido", "Estou procurando o auditorio" ],
         "responses": ["Qual sala gostaria de ir?"],
         "context": ["identidadedasala"]
        },
     {"tag": "identidadedasala",
         "patterns": [],
-        "responses": ["Vamos lá! Siga me"],
+        "responses": ["Vamos la! Siga me"],
+        "context": [""]
+       },
+    {"tag": "greeting",
+        "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+        "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
         "context": [""]
        },
     {"tag": "goodbye",
