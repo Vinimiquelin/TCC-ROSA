@@ -1,0 +1,48 @@
+version: "2.0"
+
+actions:
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - action_verificacoes
+
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_for_a_class
+
+entities:
+- salas_de_aula
+
+responses:
+  utter_greet:
+  - text: "Olá! Como você está?"
+
+  utter_cheer_up:
+  - text: "Aqui uma imagem para te alegrar!:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Algo mais em que posso ajudar?"
+
+  utter_happy:
+  - text: "Ótimo! Fico feliz em ajudar!"
+
+  utter_goodbye:
+  - text: "Tchau Tchau!"
+
+  utter_iamabot:
+  - text: "Eu sou um robô, meu nome é ROSA."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

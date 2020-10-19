@@ -1,0 +1,88 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - oi
+    - olá
+    - bom dia
+    - eai
+    - boa noite
+    - boa tarde
+    - oi rosa
+
+- intent: goodbye
+  examples: |
+    - tchau
+    - até mais
+    - te vejo mais tarde
+    - falou
+    - tenha um bom dia
+    - adeus
+    - nos vemos por ai
+
+- intent: affirm
+  examples: |
+    - sim
+    - com certeza
+    - parece bom
+    - correto
+    - perfeito
+
+- intent: deny
+  examples: |
+    - não
+    - acho que não
+    - não gosto disso
+
+- intent: mood_great
+  examples: |
+    - ótimo
+    - sensacional
+    - me sinto muito bem
+    - estou muito feliz
+    - top demais
+    - me sinto ótimo
+    - estou me sentindo nas nuvens
+    - me sinto como um rei
+    - estou animado
+    - pulando de alegria
+    - estou alegre
+
+- intent: mood_unhappy
+  examples: |
+    - meu dia foi horrível
+    - estou triste
+    - não me sinto bem
+    - estou desapontado
+    - decepcionado
+    - estou para baixo
+    - só quero ir para casa
+    - infeliz
+    - sou corinthiano
+    - meu time perdeu
+
+
+- intent: bot_challenge
+  examples: |
+    - você é um robô?
+    - você é um humano?
+    - estou falando com um robô?
+    - estou falando com um humano?
+
+- intent: ask_for_a_class
+  examples: |
+    - gostaria de liberar o acesso a sala de aula
+    - você poderia me liberar a sala [A04](salas_de_aula)?
+    - posso entrar na minha sala?
+    - você pode abrir minha sala?
+
+- lookup: salas_de_aula
+  examples: |
+    - A02
+    - A03
+    - A04
+    - A05
+    - A06
+
+  
