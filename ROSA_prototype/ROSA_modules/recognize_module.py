@@ -26,7 +26,7 @@ def recognize(img, clf, classifier, scaleFactor, minNeighbors):
         id, _ = clf.predict(gray_img[y:y+h, x:x+w])
         
         if (id == 1):
-            username = "Vini"
+            username = "Gu"
         elif (id == 2):
             username = "Natty"
         elif (id == 3):

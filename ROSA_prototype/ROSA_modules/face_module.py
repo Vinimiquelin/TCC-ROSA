@@ -330,6 +330,14 @@ def write_text(text, turtle_text, font_color, text_fill_color, font_size, x, y):
 def reset_turtle(turtle):
     turtle.reset()
 
+def choose_emotion(intent):
+    emotion = 'ellipse'
+    if (intent=='greet' or intent=='goodbye'):
+        emotion = 'happy'
+    elif intent == 'mood_unhappy':
+        emotion = 'sad'
+
+    return emotion
 
 
         
